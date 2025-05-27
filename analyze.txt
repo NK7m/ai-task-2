@@ -1,0 +1,42 @@
+EXPLORATORY DATA ANALYSIS REPORT - TITANIC DATASET
+
+Dataset Used: Titanic dataset (https://www.kaggle.com/c/titanic/data)
+
+1. SUMMARY STATISTICS:
+   - Survival Rate: 38.38%
+   - Average Age: 29.7 years
+   - Average Fare: £32.20
+   - Most common boarding class: 3rd (55.1%)
+   - Most common embarkation port: Southampton (72.44%)
+
+2. KEY VISUALIZATIONS CREATED:
+   - Survival by Class: 1st class had highest survival rate (62.96%)
+   - Age Distribution: Right-skewed with most passengers between 20-40
+   - Fare Distribution: Highly right-skewed with most fares under £50
+   - Gender Survival: Females had 74.2% survival vs males 18.89%
+   - Family Size Impact: Passengers with 1-3 family members had better survival
+
+3. CORRELATION FINDINGS:
+   - Strong positive correlation between Fare and Survival (0.26)
+   - Negative correlation between Pclass and Survival (-0.34)
+   - Moderate correlation between Age and Pclass (-0.37)
+   - SibSp and Parch show multicollinearity (0.41)
+
+4. DATA QUALITY ISSUES:
+   - Age missing for 177 passengers (19.87%)
+   - Cabin missing for 687 passengers (77.1%)
+   - Embarked missing for 2 passengers
+
+5. INTERESTING PATTERNS:
+   - Children under 10 had higher survival rates across all classes
+   - Women in 3rd class had significantly lower survival than 1st/2nd
+   - Passengers paying highest fares (>£100) had 80%+ survival
+
+6. RECOMMENDATIONS FOR FEATURE ENGINEERING:
+   - Create family_size feature combining SibSp and Parch
+   - Create age_bins to handle missing ages and non-linear relationships
+   - Extract titles from Names (Mr, Mrs, Miss, etc.)
+   - Create fare_per_person feature
+
+CONCLUSION:
+The EDA revealed several strong predictors of survival including class, gender, age, and fare. The analysis suggests these features should be prioritized in modeling, while also addressing data quality issues through imputation or feature engineering.
